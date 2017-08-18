@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                                        android:id="@+id/drawer_layout"
+                                        android:orientation="vertical"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="#fff">
+
+    <!--这个是隐藏的布局，然后通过动态的设置高度达到效果-->
+    <LinearLayout
+        android:id="@+id/visable_bar"
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:layout_gravity="center_horizontal"
+        android:transitionName="shareNames"
+        android:background="#e4e4e4"
+        android:orientation="vertical" />
+
+    <android.support.v4.widget.DrawerLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:background="#ffffff"
+                android:orientation="horizontal">
+
+
+
+
+            </LinearLayout>
+
+            <com.example.ningfu.cricbroad.View.ViewPagerIndicator
+                android:id="@+id/id_indicator"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="#fff"
+                android:orientation="horizontal"
+                app:item_count="3" >
+
+            </com.example.ningfu.cricbroad.View.ViewPagerIndicator>
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/vp_pager"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" >
+
+            </android.support.v4.view.ViewPager>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="61dp"
+                android:background="#938282"
+                android:orientation="horizontal">
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        </android.support.v4.widget.DrawerLayout>
+
+
+    </LinearLayout>
