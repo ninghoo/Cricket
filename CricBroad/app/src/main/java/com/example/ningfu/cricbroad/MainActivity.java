@@ -1,17 +1,20 @@
 package com.example.ningfu.cricbroad;
 
 import android.content.res.Resources;
+import android.graphics.Color;
 import android.os.Build;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.os.Bundle;
 import android.support.v4.widget.DrawerLayout;
+import android.support.v7.widget.Toolbar;
 import android.util.DisplayMetrics;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.LinearLayout;
 
+import com.balysv.materialmenu.MaterialMenuDrawable;
 import com.example.ningfu.cricbroad.Activity.CommonActivity;
 import com.example.ningfu.cricbroad.Fragment.WebFragment;
 import com.example.ningfu.cricbroad.View.ViewPagerIndicator;
@@ -23,11 +26,13 @@ import java.util.List;
 
 public class MainActivity extends CommonActivity
 {
+    private MaterialMenuDrawable materialMenu;
+
     private List<Fragment> mTabContents = new ArrayList<Fragment>();
 
     private FragmentPagerAdapter mAdapter;
     private ViewPager mViewPager;
-    private List<String> mDatas = Arrays.asList("Score", "News","Standing");
+    private List<String> mDatas = Arrays.asList("Score", "News","Data");
     private ViewPagerIndicator mIndicator;
 
     @Override
@@ -67,7 +72,7 @@ public class MainActivity extends CommonActivity
         WebFragment fragment1 = WebFragment.newInstance("news");
         mTabContents.add(fragment1);
 
-        WebFragment fragment2 = WebFragment.newInstance("standing");
+        WebFragment fragment2 = WebFragment.newInstance("Data");
         mTabContents.add(fragment2);
 
         mAdapter = new FragmentPagerAdapter(getSupportFragmentManager())
@@ -156,4 +161,18 @@ public class MainActivity extends CommonActivity
     {
         return (int) (dpValue * scale + 0.5f);
     }
+
+//    private  initToolbar()
+//    {
+//        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+//        setSupportActionBar(toolbar);
+//        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+//            @Override public void onClick(View v) {
+//                // Handle your drawable state here
+//                materialMenu.animateState(newState);
+//            }
+//        });
+//        materialMenu = new MaterialMenuDrawable(this, Color.WHITE, MaterialMenuDrawable.Stroke.THIN);
+//        toolbar.setNavigationIcon(materialMenu);
+//    }
 }
