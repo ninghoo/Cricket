@@ -59,6 +59,7 @@ public class MainActivity extends CommonActivity
 //
 //        RecyclerListFragment fragment = RecyclerListFragment.newInstance("music");
 //        mTabContents.add(fragment);
+        //
 
         WebFragment fragment = WebFragment.newInstance("score");
         mTabContents.add(fragment);
