@@ -17,7 +17,8 @@ import android.view.WindowManager;
 import android.widget.LinearLayout;
 
 import com.example.ningfu.cricbroad.Activity.CommonActivity;
-import com.example.ningfu.cricbroad.Adapter.TeamAdapter;
+import com.example.ningfu.cricbroad.Adapter.BottomTeamAdapter;
+import com.example.ningfu.cricbroad.Fragment.ScoreFragment;
 import com.example.ningfu.cricbroad.Fragment.WebFragment;
 import com.example.ningfu.cricbroad.View.ViewPagerIndicator;
 import com.example.ningfu.cricbroad.model.Teams;
@@ -72,7 +73,7 @@ public class MainActivity extends CommonActivity
 //        mTabContents.add(fragment);
         //
 
-        WebFragment fragment = WebFragment.newInstance("score");
+        ScoreFragment fragment = ScoreFragment.newInstance("score");
         mTabContents.add(fragment);
 
         WebFragment fragment1 = WebFragment.newInstance("news");
@@ -194,7 +195,7 @@ public class MainActivity extends CommonActivity
 
         recyclerView.setLayoutManager(linearLayoutManager);
 
-        TeamAdapter adapter = new TeamAdapter(teamsList);
+        BottomTeamAdapter adapter = new BottomTeamAdapter(teamsList);
 
         recyclerView.setAdapter(adapter);
     }

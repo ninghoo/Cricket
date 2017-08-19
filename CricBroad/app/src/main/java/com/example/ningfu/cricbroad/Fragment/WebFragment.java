@@ -6,7 +6,9 @@ import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 /**
@@ -43,6 +45,28 @@ public class WebFragment extends Fragment
 
 
         return tv;
+
+
+//        Bundle arguments = getArguments();
+//        if (arguments != null)
+//        {
+//            mTitle = arguments.getString(BUNDLE_TITLE);
+//        }
+//
+//        LinearLayout ll = new LinearLayout(getActivity());
+////        ll.setText(mTitle);
+//        ll.setGravity(Gravity.CENTER);
+//
+//        ll.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v)
+//            {
+//                Toast.makeText(getActivity(), "touch", Toast.LENGTH_SHORT).show();
+//            }
+//        });
+//
+//
+//        return ll;
     }
 
     public static WebFragment newInstance(String title)
