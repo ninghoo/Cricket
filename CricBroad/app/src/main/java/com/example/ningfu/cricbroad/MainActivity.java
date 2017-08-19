@@ -1,19 +1,21 @@
 package com.example.ningfu.cricbroad;
 
 import android.content.res.Resources;
+import android.graphics.Color;
 import android.os.Build;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.os.Bundle;
+import android.support.v4.widget.DrawerLayout;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
 import android.util.DisplayMetrics;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.LinearLayout;
 
-import com.balysv.materialmenu.MaterialMenuDrawable;
 import com.example.ningfu.cricbroad.Activity.CommonActivity;
 import com.example.ningfu.cricbroad.Adapter.TeamAdapter;
 import com.example.ningfu.cricbroad.Fragment.WebFragment;
@@ -25,10 +27,9 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+
 public class MainActivity extends CommonActivity
 {
-    private MaterialMenuDrawable materialMenu;
-
     private List<Teams> teamsList = new ArrayList<>();
 
     private List<Fragment> mTabContents = new ArrayList<Fragment>();
@@ -210,4 +211,5 @@ public class MainActivity extends CommonActivity
         teamsList.add(new Teams(R.drawable.sunrisershyderabad));
 
     }
+
 }
