@@ -130,18 +130,19 @@
                             android:layout_height="47dp"
                             android:orientation="vertical">
 
-                            <TextView
-                                android:layout_width="20dp"
-                                android:layout_height="20dp"
-                                />
+                            <!--<TextView-->
+                                <!--android:layout_width="20dp"-->
+                                <!--android:layout_height="20dp"-->
+                                <!--android:text="<" />-->
 
-                            <TextView
-                                android:layout_width="20dp"
-                                android:layout_height="20dp"/>
+                            <!--<TextView-->
+                                <!--android:layout_width="20dp"-->
+                                <!--android:layout_height="20dp"/>-->
 
-                            <TextView
-                                android:layout_width="20dp"
-                                android:layout_height="20dp"/>
+                            <!--<TextView-->
+                                <!--android:layout_width="20dp"-->
+                                <!--android:layout_height="20dp"-->
+                                <!--android:text="<" />-->
 
                         </RelativeLayout>
 
