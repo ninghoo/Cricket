@@ -18,7 +18,10 @@ import android.widget.LinearLayout;
 
 import com.example.ningfu.cricbroad.Activity.CommonActivity;
 import com.example.ningfu.cricbroad.Adapter.BottomTeamAdapter;
+import com.example.ningfu.cricbroad.Fragment.DataFragment;
+import com.example.ningfu.cricbroad.Fragment.NewsFragment;
 import com.example.ningfu.cricbroad.Fragment.ScoreFragment;
+import com.example.ningfu.cricbroad.Fragment.TeamFragment;
 import com.example.ningfu.cricbroad.Fragment.WebFragment;
 import com.example.ningfu.cricbroad.View.ViewPagerIndicator;
 import com.example.ningfu.cricbroad.model.Teams;
@@ -37,7 +40,7 @@ public class MainActivity extends CommonActivity
 
     private FragmentPagerAdapter mAdapter;
     private ViewPager mViewPager;
-    private List<String> mDatas = Arrays.asList("Score", "News","Data");
+    private List<String> mDatas = Arrays.asList("Score", "News","Data","Team");
     private ViewPagerIndicator mIndicator;
 
     @Override
@@ -76,11 +79,14 @@ public class MainActivity extends CommonActivity
         ScoreFragment fragment = ScoreFragment.newInstance("score");
         mTabContents.add(fragment);
 
-        WebFragment fragment1 = WebFragment.newInstance("news");
+        NewsFragment fragment1 = NewsFragment.newInstance("news");
         mTabContents.add(fragment1);
 
-        WebFragment fragment2 = WebFragment.newInstance("Data");
+        DataFragment fragment2 = DataFragment.newInstance("Data");
         mTabContents.add(fragment2);
+
+        TeamFragment fragment3 = TeamFragment.newInstance("Team");
+        mTabContents.add(fragment3);
 
         mAdapter = new FragmentPagerAdapter(getSupportFragmentManager())
         {
@@ -210,6 +216,7 @@ public class MainActivity extends CommonActivity
         teamsList.add(new Teams(R.drawable.royalchallengers));
         teamsList.add(new Teams(R.drawable.rsingpune));
         teamsList.add(new Teams(R.drawable.sunrisershyderabad));
+        teamsList.add(new Teams(R.drawable.current));
 
     }
 

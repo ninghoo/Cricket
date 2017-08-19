@@ -340,7 +340,7 @@ public class ViewPagerIndicator extends LinearLayout
         tv.setTextColor(COLOR_TEXT_NORMAL);
         tv.setText(text);
 
-        Typeface typeFace =Typeface.createFromAsset(mContext.getAssets(),"fonts/Ubuntu Mono derivative Powerline.ttf");
+        Typeface typeFace =Typeface.createFromAsset(mContext.getAssets(),"fonts/Ubuntu Mono derivative Powerline Bold Italic.ttf");
         tv.setTypeface(typeFace);
 
         tv.setTextSize(TypedValue.COMPLEX_UNIT_SP, 16);
