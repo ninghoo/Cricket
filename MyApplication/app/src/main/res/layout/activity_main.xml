@@ -17,6 +17,18 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
+            <com.balysv.materialmenu.MaterialMenuView
+                android:id="@+id/material_menu_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:mm_strokeWidth="2"
+                app:mm_color="#ffcc0000"
+                app:mm_transformDuration="3000"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                app:mm_scale="@integer/demo_scale"/>
+
             <!--<LinearLayout-->
                 <!--android:layout_width="match_parent"-->
                 <!--android:layout_height="match_parent"-->
