@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
                                         xmlns:app="http://schemas.android.com/apk/res-auto"
                                         android:id="@+id/drawer_layout"
                                         android:orientation="vertical"
                                         android:layout_width="match_parent"
                                         android:layout_height="match_parent"
                                         android:background="#fff">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
     <!--这个是隐藏的布局，然后通过动态的设置高度达到效果-->
     <LinearLayout
@@ -15,145 +20,163 @@
         android:layout_gravity="center_horizontal"
         android:transitionName="shareNames"
         android:background="#e4e4e4"
-        android:orientation="vertical" />
+        android:orientation="vertical"
+        android:layout_alignParentTop="true"/>
 
-    <android.support.v4.widget.DrawerLayout
+
+
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+            <android.support.design.widget.CoordinatorLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <android.support.design.widget.AppBarLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:id="@+id/toolbar_navi"
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:background="#ffffff"
+                        app:layout_scrollFlags="scroll|enterAlways|snap"
+                        android:orientation="horizontal" >
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1px"
+                                android:layout_alignParentBottom="true"
+                                android:background="#848484"/>
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                xmlns:app="http://schemas.android.com/apk/res-auto"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginRight="20dp"
+                                android:layout_marginTop="10dp"
+                                android:id="@+id/profile_image"
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"
+                                android:src="@drawable/handsome"
+                                app:civ_border_width="1dp"
+                                app:civ_border_color="#d6d6d6"/>
+
+                        </RelativeLayout>
+
+                        </LinearLayout>
+
+                </android.support.design.widget.AppBarLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                    android:orientation="vertical">
+
+                <com.example.ningfu.cricbroad.View.ViewPagerIndicator
+                    android:id="@+id/id_indicator"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="#fff"
+                    android:elevation="6dp"
+                    android:orientation="horizontal"
+                    app:item_count="3" />
+
+                <LinearLayout
+                    android:id="@+id/toolbar_calendar"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:elevation="0dp"
+                    android:background="#ffffff"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="47dp"
+                            android:orientation="vertical">
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1px"
+                            android:background="#cecece"
+                            />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/vp_pager"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" >
+
+                </android.support.v4.view.ViewPager>
+
+                </LinearLayout>
+
+            </android.support.design.widget.CoordinatorLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:layout_height="60dp"
+            android:background="#ffffff"
+            android:orientation="vertical"
+            android:layout_alignParentBottom="true">
 
-            <android.support.design.widget.AppBarLayout
+            <View
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-            <android.support.v7.widget.Toolbar
-                android:id="@+id/toolbar_navi"
-                android:layout_width="match_parent"
-                android:layout_height="55dp"
-                android:background="#ffffff"
-                android:orientation="horizontal" >
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <de.hdodenhof.circleimageview.CircleImageView
-                        xmlns:app="http://schemas.android.com/apk/res-auto"
-                        android:layout_alignParentRight="true"
-                        android:layout_marginRight="20dp"
-                        android:layout_marginTop="10dp"
-                        android:id="@+id/profile_image"
-                        android:layout_width="35dp"
-                        android:layout_height="35dp"
-                        android:src="@drawable/handsome"
-                        app:civ_border_width="1dp"
-                        app:civ_border_color="#d6d6d6"/>
-
-                </RelativeLayout>
-
-                </android.support.v7.widget.Toolbar >
-
-            </android.support.design.widget.AppBarLayout>
-
-
-            <com.example.ningfu.cricbroad.View.ViewPagerIndicator
-                android:id="@+id/id_indicator"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:background="#fff"
-                android:elevation="5dp"
-                android:orientation="horizontal"
-                app:item_count="3" />
-
-            <android.support.v7.widget.Toolbar
-                android:id="@+id/toolbar_calendar"
-                android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:elevation="0dp"
-                android:background="#ffffff"
-                >
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="47dp"
-                        android:orientation="vertical">
-
-                        </LinearLayout>
-
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="1px"
-                        android:background="#b3b3b3"
-                        />
-
-                </LinearLayout>
-
-                </android.support.v7.widget.Toolbar>
-
-            <android.support.v4.view.ViewPager
-                android:id="@+id/vp_pager"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1" >
-
-            </android.support.v4.view.ViewPager>
+                android:layout_height="1dp"
+                android:background="#d9d9d9"
+                />
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:background="#ffffff"
-                android:orientation="vertical">
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="#d9d9d9"
-                    />
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
 
                 <LinearLayout
-                    android:layout_width="match_parent"
+                    android:layout_width="80dp"
                     android:layout_height="match_parent"
-                    android:orientation="horizontal">
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingTop="10dp"
+                    >
 
-                    <LinearLayout
-                        android:layout_width="80dp"
-                        android:layout_height="match_parent"
-                        android:paddingLeft="20dp"
-                        android:paddingRight="20dp"
-                        android:paddingTop="10dp"
-                        >
-
-                        <ImageView
-                            android:id="@+id/item_iv_homenbet"
-                            android:layout_width="40dp"
-                            android:layout_height="40dp"
-                            android:src="@drawable/gaming"/>
-
-                        </LinearLayout>
-
-                    <android.support.v7.widget.RecyclerView
-                        android:id="@+id/recycl_bottomTeam"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        />
+                    <ImageView
+                        android:id="@+id/item_iv_homenbet"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/gaming"/>
 
                 </LinearLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recycl_bottomTeam"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    />
 
             </LinearLayout>
 
         </LinearLayout>
 
-        </android.support.v4.widget.DrawerLayout>
-
-
-    </LinearLayout>
+</RelativeLayout>
