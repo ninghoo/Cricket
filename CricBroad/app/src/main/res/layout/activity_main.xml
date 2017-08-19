@@ -38,14 +38,23 @@
                 android:background="#ffffff"
                 android:orientation="horizontal" >
 
-                <de.hdodenhof.circleimageview.CircleImageView
-                    xmlns:app="http://schemas.android.com/apk/res-auto"
-                    android:id="@+id/profile_image"
-                    android:layout_width="96dp"
-                    android:layout_height="96dp"
-                    android:src="@drawable/oafront"
-                    app:civ_border_width="2dp"
-                    app:civ_border_color="#FF000000"/>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="10dp"
+                        android:id="@+id/profile_image"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:src="@drawable/handsome"
+                        app:civ_border_width="1dp"
+                        app:civ_border_color="#d6d6d6"/>
+
+                </RelativeLayout>
 
                 </android.support.v7.widget.Toolbar >
 
@@ -103,13 +112,42 @@
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:background="#ffffff"
-                android:orientation="horizontal">
+                android:orientation="vertical">
 
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
                     android:background="#d9d9d9"
                     />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:paddingTop="10dp"
+                        >
+
+                        <ImageView
+                            android:id="@+id/item_iv_homenbet"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/gaming"/>
+
+                        </LinearLayout>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recycl_bottomTeam"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        />
+
+                </LinearLayout>
 
             </LinearLayout>
 
