@@ -112,55 +112,73 @@
                     android:orientation="horizontal"
                     app:item_count="3" />
 
-                <LinearLayout
-                    android:id="@+id/toolbar_calendar"
-                    android:layout_width="match_parent"
-                    android:layout_height="48dp"
-                    android:elevation="0dp"
-                    android:background="#ffffff"
-                    >
+                <!--<LinearLayout-->
+                    <!--android:id="@+id/toolbar_calendar"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="48dp"-->
+                    <!--android:elevation="0dp"-->
+                    <!--android:background="#ffffff"-->
+                    <!--&gt;-->
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical">
+                    <!--<LinearLayout-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="match_parent"-->
+                        <!--android:orientation="vertical">-->
 
-                        <RelativeLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="47dp"
-                            android:orientation="vertical">
+                        <!--<RelativeLayout-->
+                            <!--android:layout_width="match_parent"-->
+                            <!--android:layout_height="47dp">-->
 
-                            <!--<TextView-->
+                            <!--<android.support.v7.widget.AppCompatButton-->
                                 <!--android:layout_width="20dp"-->
                                 <!--android:layout_height="20dp"-->
-                                <!--android:text="<" />-->
+                                <!--android:layout_marginLeft="15dp"-->
+                                <!--android:layout_centerVertical="true"-->
+                                <!--android:background="@drawable/ic_keyboard_arrow_left_grey600_48dp" />-->
 
-                            <!--<TextView-->
-                                <!--android:layout_width="20dp"-->
-                                <!--android:layout_height="20dp"/>-->
-
-                            <!--<TextView-->
+                            <!--<android.support.v7.widget.AppCompatButton-->
                                 <!--android:layout_width="20dp"-->
                                 <!--android:layout_height="20dp"-->
-                                <!--android:text="<" />-->
+                                <!--android:layout_centerVertical="true"-->
+                                <!--android:layout_toLeftOf="@+id/tv_date"-->
+                                <!--android:layout_marginRight="5dp"-->
+                                <!--android:background="@drawable/ic_looks_6_black_48dp" />-->
 
-                        </RelativeLayout>
+                            <!--<TextView-->
+                                <!--android:id="@+id/tv_date"-->
+                                <!--android:layout_width="wrap_content"-->
+                                <!--android:layout_height="wrap_content"-->
+                                <!--android:layout_centerInParent="true"-->
+                                <!--android:textSize="11.5dp"-->
+                                <!--android:text="Satuday . 8 .19"/>-->
 
-                        <View
-                            android:layout_width="match_parent"
-                            android:layout_height="1px"
-                            android:background="#cecece"
-                            />
+                            <!--<android.support.v7.widget.AppCompatButton-->
+                                <!--android:layout_width="20dp"-->
+                                <!--android:layout_height="20dp"-->
+                                <!--android:layout_alignParentRight="true"-->
+                                <!--android:layout_centerVertical="true"-->
+                                <!--android:layout_marginRight="15dp"-->
+                                <!--android:background="@drawable/ic_keyboard_arrow_right_grey600_48dp" />-->
 
-                    </LinearLayout>
+                        <!--</RelativeLayout>-->
 
-                </LinearLayout>
+                        <!--<View-->
+                            <!--android:layout_width="match_parent"-->
+                            <!--android:layout_height="1px"-->
+                            <!--android:background="#cecece"-->
+                            <!--/>-->
+
+                    <!--</LinearLayout>-->
+
+                <!--</LinearLayout>-->
 
                 <android.support.v4.view.ViewPager
                     android:id="@+id/vp_pager"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1" >
+
+
 
                 </android.support.v4.view.ViewPager>
 
