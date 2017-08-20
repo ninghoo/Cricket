@@ -64,7 +64,7 @@ public class ScoreFragment extends Fragment
 
     private void initData()
     {
-        for(int i = 0; i < 18; i ++)
+        for(int i = 0; i < 2; i ++)
         {
             ScoreItem scoreItem = new ScoreItem(R.drawable.colordelhi);
             ScoreItem scoreItem1 = new ScoreItem(R.drawable.colormumbaiindians);

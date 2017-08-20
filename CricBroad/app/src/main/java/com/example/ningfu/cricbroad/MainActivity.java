@@ -79,8 +79,11 @@ public class MainActivity extends CommonActivity
         ScoreFragment fragment = ScoreFragment.newInstance("score");
         mTabContents.add(fragment);
 
-        NewsFragment fragment1 = NewsFragment.newInstance("news");
+        ScoreFragment fragment1 = ScoreFragment.newInstance("score");
         mTabContents.add(fragment1);
+
+//        NewsFragment fragment1 = NewsFragment.newInstance("news");
+//        mTabContents.add(fragment1);
 
         DataFragment fragment2 = DataFragment.newInstance("Data");
         mTabContents.add(fragment2);
