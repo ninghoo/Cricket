@@ -11,6 +11,8 @@ import com.example.ningfu.cricbroad.model.ScoreItem;
 
 import java.util.List;
 
+import de.hdodenhof.circleimageview.CircleImageView;
+
 /**
  * Created by ningfu on 17-8-19.
  */
@@ -21,13 +23,13 @@ public class ScoreItemAdapter extends RecyclerView.Adapter<ScoreItemAdapter.View
 
     static class ViewHolder extends RecyclerView.ViewHolder
     {
-        ImageView teamImage;
+        CircleImageView teamImage;
 
         public ViewHolder(View view)
         {
             super(view);
 
-            teamImage = (ImageView) view.findViewById(R.id.item_iv_teamLeft);
+            teamImage = (CircleImageView) view.findViewById(R.id.item_iv_teamLeft);
         }
     }
 

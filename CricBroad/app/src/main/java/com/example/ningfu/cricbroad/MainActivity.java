@@ -210,9 +210,9 @@ public class MainActivity extends CommonActivity
     {
         teamsList.add(new Teams(R.drawable.delhi));
         teamsList.add(new Teams(R.drawable.gujaratlions));
-        teamsList.add(new Teams(R.drawable.kingsxi));
         teamsList.add(new Teams(R.drawable.knightriders));
         teamsList.add(new Teams(R.drawable.mumbaiindians));
+        teamsList.add(new Teams(R.drawable.kingsxi));
         teamsList.add(new Teams(R.drawable.royalchallengers));
         teamsList.add(new Teams(R.drawable.rsingpune));
         teamsList.add(new Teams(R.drawable.sunrisershyderabad));

@@ -64,11 +64,17 @@ public class ScoreFragment extends Fragment
 
     private void initData()
     {
-        for(int i = 0; i < 8; i ++)
+        for(int i = 0; i < 18; i ++)
         {
-            ScoreItem scoreItem = new ScoreItem(R.drawable.delhi);
+            ScoreItem scoreItem = new ScoreItem(R.drawable.colordelhi);
+            ScoreItem scoreItem1 = new ScoreItem(R.drawable.colormumbaiindians);
+            ScoreItem scoreItem2 = new ScoreItem(R.drawable.colorsunrisershyderabad);
+            ScoreItem scoreItem3 = new ScoreItem(R.drawable.colorroyalchallengers);
 
             scoreItemList.add(scoreItem);
+            scoreItemList.add(scoreItem1);
+            scoreItemList.add(scoreItem2);
+            scoreItemList.add(scoreItem3);
         }
     }
 
