@@ -8,8 +8,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.ningfu.cricbroad.Adapter.NewsItemAdapter;
 import com.example.ningfu.cricbroad.Adapter.ScoreItemAdapter;
 import com.example.ningfu.cricbroad.R;
+import com.example.ningfu.cricbroad.model.NewsItem;
 import com.example.ningfu.cricbroad.model.ScoreItem;
 
 import java.util.ArrayList;
@@ -21,7 +23,7 @@ import java.util.List;
 
 public class NewsFragment extends Fragment
 {
-    private List<ScoreItem> scoreItemList = new ArrayList<>();
+    private List<NewsItem> newsItemList = new ArrayList<>();
     private RecyclerView recyclerView;
 
     public static final String BUNDLE_TITLE = "title";
@@ -40,11 +42,11 @@ public class NewsFragment extends Fragment
             mTitle = arguments.getString(BUNDLE_TITLE);
         }
 
-        view = inflater.inflate(R.layout.fragment_scorerecycler, container, false);
+        view = inflater.inflate(R.layout.fragment_newsrecycler, container, false);
 
         initData();
 
-        initScoreRecyClerView();
+        initNewsRecyClerView();
 
         return view;
     }
@@ -63,20 +65,20 @@ public class NewsFragment extends Fragment
     {
         for(int i = 0; i < 8; i ++)
         {
-            ScoreItem scoreItem = new ScoreItem(R.drawable.delhi);
+            NewsItem newsItem = new NewsItem(R.drawable.pandaya_brothers);
 
-            scoreItemList.add(scoreItem);
+            newsItemList.add(newsItem);
         }
     }
 
-    private  void initScoreRecyClerView()
+    private  void initNewsRecyClerView()
     {
         recyclerView = (RecyclerView) view.findViewById(R.id.recycl_scorelist);
 
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
         recyclerView.setLayoutManager(linearLayoutManager);
 
-        ScoreItemAdapter adapter = new ScoreItemAdapter(scoreItemList);
+        NewsItemAdapter adapter = new NewsItemAdapter(newsItemList);
         recyclerView.setAdapter(adapter);
     }
 }

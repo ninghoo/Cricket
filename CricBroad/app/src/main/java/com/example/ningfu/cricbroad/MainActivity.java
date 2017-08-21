@@ -60,6 +60,8 @@ public class MainActivity extends CommonActivity
         //设置Tab上的标题
         mIndicator.setTabItemTitles(mDatas);
         mViewPager.setAdapter(mAdapter);
+        mViewPager.setPageMargin((int)getResources().getDimensionPixelOffset(R.dimen.default_bmb_buttonHorizontalMargin));
+
         //设置关联的ViewPager
         mIndicator.setViewPager(mViewPager,0);
     }
@@ -79,11 +81,8 @@ public class MainActivity extends CommonActivity
         ScoreFragment fragment = ScoreFragment.newInstance("score");
         mTabContents.add(fragment);
 
-        ScoreFragment fragment1 = ScoreFragment.newInstance("score");
+        NewsFragment fragment1 = NewsFragment.newInstance("news");
         mTabContents.add(fragment1);
-
-//        NewsFragment fragment1 = NewsFragment.newInstance("news");
-//        mTabContents.add(fragment1);
 
         DataFragment fragment2 = DataFragment.newInstance("Data");
         mTabContents.add(fragment2);

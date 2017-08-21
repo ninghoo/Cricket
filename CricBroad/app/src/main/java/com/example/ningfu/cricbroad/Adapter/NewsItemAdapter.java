@@ -8,6 +8,7 @@ import android.widget.ImageView;
 
 import com.example.ningfu.cricbroad.Application.CricBroadApplication;
 import com.example.ningfu.cricbroad.R;
+import com.example.ningfu.cricbroad.model.NewsItem;
 import com.example.ningfu.cricbroad.model.ScoreItem;
 import com.nostra13.universalimageloader.core.ImageLoader;
 
@@ -19,32 +20,32 @@ import de.hdodenhof.circleimageview.CircleImageView;
  * Created by ningfu on 17-8-19.
  */
 
-public class ScoreItemAdapter extends RecyclerView.Adapter<ScoreItemAdapter.ViewHolder>
+public class NewsItemAdapter extends RecyclerView.Adapter<NewsItemAdapter.ViewHolder>
 {
-    private List<ScoreItem> mScores;
+    private List<NewsItem> mNews;
 
     static class ViewHolder extends RecyclerView.ViewHolder
     {
-        CircleImageView teamImage;
+        ImageView newsImage;
 
         public ViewHolder(View view)
         {
             super(view);
 
-            teamImage = (CircleImageView) view.findViewById(R.id.item_iv_teamLeft);
+            newsImage = (ImageView) view.findViewById(R.id.item_iv_newsimage);
         }
     }
 
-    public ScoreItemAdapter(List<ScoreItem> teamsList)
+    public NewsItemAdapter(List<NewsItem> newsList)
     {
-        mScores = teamsList;
+        mNews = newsList;
     }
 
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType)
     {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_scorelist, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_newslist, parent, false);
 
         ViewHolder holder = new ViewHolder(view);
 
@@ -54,18 +55,19 @@ public class ScoreItemAdapter extends RecyclerView.Adapter<ScoreItemAdapter.View
     @Override
     public void onBindViewHolder(ViewHolder holder, int position)
     {
-        ScoreItem scoreItem = mScores.get(position);
+//        NewsItem newsItem = mNews.get(position);
+//
+//        holder.newsImage.setImageResource(newsItem.getTeamLeft());
 
-//        holder.teamImage.setImageResource(scoreItem.getTeamLeft());
+        String url = "drawable://" + R.drawable.pandaya_brothers;
 
-        String url = "drawable://" + scoreItem.getTeamLeft();
+        ImageLoader.getInstance().displayImage(url, holder.newsImage, CricBroadApplication.mOptions);
 
-        ImageLoader.getInstance().displayImage(url, holder.teamImage, CricBroadApplication.mOptions);
     }
 
     @Override
     public int getItemCount() {
-        return mScores.size();
+        return mNews.size();
     }
 
 }

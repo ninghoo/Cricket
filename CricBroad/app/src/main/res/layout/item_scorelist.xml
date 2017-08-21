@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="130dp"
         android:background="#ffffff"
-        android:elevation="1dp"
+        android:elevation="5dp"
         android:orientation="horizontal">
 
         <RelativeLayout
@@ -55,32 +55,32 @@
                 android:id="@+id/item_iv_teamLeft"
                 android:layout_width="45dp"
                 android:layout_height="45dp"
-                android:layout_marginStart="18dp"
                 app:civ_border_color="#5b5b5b"
                 app:civ_border_width="1px"
-                android:layout_centerVertical="true"
+                android:layout_marginStart="16dp"
+                android:layout_alignTop="@+id/item_iv_teamRight"
                 android:layout_alignParentStart="true"/>
 
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/item_iv_teamRight"
                 android:layout_width="45dp"
                 android:layout_height="45dp"
-                android:layout_marginEnd="18dp"
+                android:layout_marginEnd="16dp"
                 android:src="@drawable/colormumbaiindians"
                 app:civ_border_color="#5b5b5b"
                 app:civ_border_width="1px"
-                android:layout_alignTop="@+id/item_iv_teamLeft"
+                android:layout_centerVertical="true"
                 android:layout_alignParentEnd="true"/>
 
             <TextView
                 android:id="@+id/textView2"
-                android:layout_width="12dp"
-                android:layout_height="12dp"
+                android:layout_width="13dp"
+                android:layout_height="13dp"
                 android:layout_centerHorizontal="true"
                 android:layout_centerVertical="true"
                 android:gravity="center"
                 android:text="VS"
-                android:textSize="9dp"
+                android:textSize="10dp"
                 android:textStyle="italic|bold"/>
 
 
@@ -88,7 +88,7 @@
             <TextView
                 android:id="@+id/tv_leftTeamScore"
                 android:layout_width="45dp"
-                android:layout_height="wrap_content"
+                android:layout_height="18dp"
                 android:gravity="center"
                 android:singleLine="true"
                 android:text="307/8"
@@ -98,23 +98,24 @@
                 android:typeface="normal"
                 android:background="@drawable/four_corner_indorange"
                 android:layout_marginTop="10dp"
-                android:layout_marginRight="13dp"
+                android:layout_marginRight="10dp"
                 android:layout_alignParentTop="true"
                 android:layout_toStartOf="@+id/textView2"/>
 
             <TextView
                 android:id="@+id/tv_rightTeamScore"
-                android:layout_width="60dp"
-                android:layout_height="wrap_content"
-                android:gravity="left"
+                android:layout_width="45dp"
+                android:layout_height="18dp"
+                android:background="@drawable/four_corner_gray"
+                android:gravity="center"
                 android:singleLine="true"
                 android:text="167/6"
                 android:textSize="10dp"
                 android:textStyle="normal"
                 android:typeface="normal"
                 android:layout_marginLeft="15dp"
-                android:layout_alignBaseline="@+id/tv_leftTeamScore"
-                android:layout_alignBottom="@+id/tv_leftTeamScore"
+                android:layout_marginStart="10dp"
+                android:layout_alignTop="@+id/tv_leftTeamScore"
                 android:layout_toEndOf="@+id/textView2"/>
 
 
@@ -123,11 +124,12 @@
                 android:id="@+id/tv_leftTeamName"
                 android:layout_width="80dp"
                 android:layout_height="wrap_content"
-                android:gravity="center"
+                android:gravity="left"
                 android:singleLine="true"
                 android:textStyle="normal"
                 android:text="De devli"
                 android:textSize="10dp"
+                android:paddingLeft="14dp"
                 android:layout_alignTop="@+id/textView2"
                 android:layout_toEndOf="@+id/item_iv_teamLeft"/>
 
@@ -135,11 +137,12 @@
                 android:id="@+id/tv_rightTeamName"
                 android:layout_width="80dp"
                 android:layout_height="wrap_content"
-                android:gravity="center"
+                android:gravity="right"
                 android:singleLine="true"
                 android:text="Mubai Indians"
                 android:textSize="10dp"
                 android:textStyle="normal"
+                android:paddingRight="14dp"
                 android:layout_marginLeft="134dp"
                 android:layout_alignTop="@+id/textView2"
                 android:layout_toStartOf="@+id/item_iv_teamRight"/>
