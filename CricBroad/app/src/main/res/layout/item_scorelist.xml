@@ -131,7 +131,11 @@
                 android:textSize="10dp"
                 android:paddingLeft="14dp"
                 android:layout_alignTop="@+id/textView2"
-                android:layout_toEndOf="@+id/item_iv_teamLeft"/>
+                android:layout_toEndOf="@+id/item_iv_teamLeft"
+                android:shadowColor="#cecece"
+                android:shadowRadius="10"
+                android:shadowDx="2"
+                android:shadowDy="2"/>
 
             <TextView
                 android:id="@+id/tv_rightTeamName"

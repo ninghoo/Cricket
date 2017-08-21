@@ -5,7 +5,7 @@
                                         android:orientation="vertical"
                                         android:layout_width="match_parent"
                                         android:layout_height="match_parent"
-                                        android:background="#fff">
+                                        android:background="#000000">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -19,7 +19,7 @@
         android:layout_height="1dp"
         android:layout_gravity="center_horizontal"
         android:transitionName="shareNames"
-        android:background="#e4e4e4"
+        android:background="@drawable/two_top_lightgray10dp"
         android:orientation="vertical"
         android:layout_alignParentTop="true"/>
 
@@ -189,10 +189,16 @@
 
     </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:background="#000"/>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:background="#ffffff"
+            android:background="@drawable/two_bottom_wht10dp"
             android:orientation="vertical"
             android:layout_alignParentBottom="true">
 
